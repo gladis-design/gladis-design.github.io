@@ -2,13 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>For Erick 💌</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <main class="card">
-    <div class="heart"></div>
+    <!-- Perfect SVG heart -->
+    <svg class="heart" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 21s-7.2-4.6-9.6-8.4C.7 9.7 2.1 6.6 5.1 5.7c1.9-.6 4 .1 5.4 1.7 1.4-1.6 3.5-2.3 5.4-1.7 3 .9 4.4 4 2.7 6.9C19.2 16.4 12 21 12 21z"/>
+    </svg>
+
     <h1>Erick, will you be my Valentine?</h1>
     <p class="sub">I made this just for you ❤️</p>
 
@@ -20,6 +25,11 @@
     <p id="msg" class="msg"></p>
   </main>
 
+  <!-- Your script -->
   <script src="script.js"></script>
+
+  <!-- Confetti library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
 </body>
 </html>
