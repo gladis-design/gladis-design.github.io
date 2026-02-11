@@ -61,7 +61,7 @@ noBtn.addEventListener("mouseenter", moveNo);
 yesBtn.addEventListener("click", () => {
   locked = true;
 
-  msg.textContent = "Exactly Beep Boop 😌";
+  msg.textContent = "Exactly Beep Boop 😌 There was ever a doubt in my mind.";
   msg.classList.add("msg-final");
 
   yesBtn.style.transform = "scale(1)";
