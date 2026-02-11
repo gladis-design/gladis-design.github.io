@@ -2,26 +2,22 @@
   font-family: system-ui, -apple-system, Arial, sans-serif;
 }
 
-/* GIF BACKGROUND */
 body{
   margin: 0;
   min-height: 100vh;
   display: grid;
   place-items: center;
 
+  /* Use your uploaded GIF as background */
   background:
-    linear-gradient(
-      rgba(0,0,0,0.45),
-      rgba(0,0,0,0.45)
-    ),
-    url("https://media.tenor.com/bSa07.gif");
+    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+    url("bg.gif");
 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-/* Card */
 .card{
   width: min(560px, 92vw);
   padding: 30px 22px 26px;
@@ -34,7 +30,6 @@ body{
   color: #ffffff;
 }
 
-/* Sticker */
 .sticker{
   width: 160px;
   height: auto;
@@ -60,7 +55,6 @@ h1{
   opacity: 0.95;
 }
 
-/* Buttons container */
 .btns{
   position: relative;
   width: min(420px, 100%);
@@ -71,7 +65,6 @@ h1{
   gap: 14px;
 }
 
-/* Shared button style */
 button{
   width: 100%;
   padding: 14px 18px;
@@ -83,7 +76,6 @@ button{
   box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
-/* YES button */
 .yes{
   grid-column: 1;
   background: #22c55e;
@@ -93,15 +85,16 @@ button{
   transition: transform .2s ease;
 }
 
-/* NO button */
 .no{
   background: #ef4444;
   color: #ffffff;
+
   position: absolute;
   left: 50%;
   top: 0;
   width: calc(50% - 7px);
   z-index: 1;
+
   transition: left .15s ease, top .15s ease, transform .15s ease;
 }
 
