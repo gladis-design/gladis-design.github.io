@@ -103,3 +103,14 @@ button{
   font-size: 1.15rem;
   min-height: 1.5em;
 }
+
+/* After YES, make message more prominent and safe */
+.msg-final{
+  margin-top: 10px !important;
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: rgba(0,0,0,0.25);
+  display: inline-block;
+}
