@@ -11,7 +11,7 @@ body{
   /* Use your uploaded GIF as background */
   background:
     linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
-    url("bg.gif");
+    url("bg.gif.JPG");
 
   background-size: cover;
   background-position: center;
