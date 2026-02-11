@@ -14,10 +14,10 @@ const noMessages = [
 let noCount = 0;
 let yesScale = 1;
 
-// YES CLICK
 yesBtn.addEventListener("click", () => {
-  msg.textContent = "Exactly, beep boop 😌";
+  msg.textContent = "Exactly Beep Boop 😌";
 
+  // Confetti 🎉
   confetti({
     particleCount: 160,
     spread: 80,
@@ -39,29 +39,12 @@ yesBtn.addEventListener("click", () => {
   noBtn.style.transform = "scale(0.95)";
 });
 
-// NO CLICK
-function handleNo(e){
-  e.preventDefault();
-  if (noBtn.disabled) return;
-
-  noBtn.textContent =
-    noMessages[Math.min(noCount, noMessages.length - 1)];
-
-  yesScale = Math.min(yesScale + 0.18, 2.2);
-  yesBtn.style.transform = `scale(${yesScale})`;
-
-  msg.textContent = "Please say yes 🥹";
-
-  moveNo();
-  noCount++;
-}
-
-// Keep No on right side only
 function moveNo(){
   const box = btnBox.getBoundingClientRect();
   const btn = noBtn.getBoundingClientRect();
   const padding = 6;
 
+  // constrain to RIGHT HALF only
   const minX = box.width / 2 + padding;
   const maxX = box.width - btn.width - padding;
   const minY = padding;
@@ -73,6 +56,21 @@ function moveNo(){
   noBtn.style.left = `${x}px`;
   noBtn.style.top  = `${y}px`;
   noBtn.style.transform = "scale(1.05)";
+}
+
+function handleNo(e){
+  e.preventDefault();
+  if (noBtn.disabled) return;
+
+  noBtn.textContent = noMessages[Math.min(noCount, noMessages.length - 1)];
+
+  yesScale = Math.min(yesScale + 0.18, 2.2);
+  yesBtn.style.transform = `scale(${yesScale})`;
+
+  msg.textContent = "Please say yes 😇💖";
+
+  moveNo();
+  noCount++;
 }
 
 noBtn.addEventListener("click", handleNo);
