@@ -67,7 +67,7 @@ function handleNo(e){
   yesScale = Math.min(yesScale + 0.18, 2.2);
   yesBtn.style.transform = `scale(${yesScale})`;
 
-  msg.textContent = "Please say yes 😇💖";
+  msg.textContent = "Please say yes 🥹";
 
   moveNo();
   noCount++;
