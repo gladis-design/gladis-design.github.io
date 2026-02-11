@@ -2,13 +2,13 @@
   font-family: system-ui, -apple-system, Arial, sans-serif;
 }
 
+/* BACKGROUND IMAGE */
 body{
   margin: 0;
   min-height: 100vh;
   display: grid;
   place-items: center;
 
-  /* Use your uploaded GIF as background */
   background:
     linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
     url("bg.gif.JPG");
@@ -22,7 +22,7 @@ body{
   width: min(560px, 92vw);
   padding: 30px 22px 26px;
   border-radius: 22px;
-  background: rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.20);
   backdrop-filter: blur(14px);
   border: 1px solid rgba(255,255,255,0.35);
   box-shadow: 0 20px 60px rgba(0,0,0,0.35);
@@ -88,28 +88,27 @@ button{
 .no{
   background: #ef4444;
   color: #ffffff;
-
   position: absolute;
   left: 50%;
   top: 0;
   width: calc(50% - 7px);
   z-index: 1;
-
   transition: left .15s ease, top .15s ease, transform .15s ease;
 }
 
 .msg{
-  margin-top: 18px;
+  margin-top: 28px;
   font-size: 1.15rem;
-  min-height: 1.5em;
+  min-height: 2em;
+  position: relative;
+  z-index: 4;
 }
 
-/* After YES, make message more prominent and safe */
 .msg-final{
-  margin-top: 10px !important;
+  margin-bottom: 12px;
+  padding: 14px 18px;
   font-size: 1.3rem;
   font-weight: 700;
-  padding: 14px 16px;
   border-radius: 16px;
   background: rgba(0,0,0,0.25);
   display: inline-block;
